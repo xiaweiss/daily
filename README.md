@@ -3,5 +3,6 @@ idea, practice or some else
 
 自己的小日常
 
-[EMAIL](xiaweiss@foxmail.com) |
-[BLOG](http://xiaweiss.com)
+# License
+
+[Anti-996 License](https://github.com/996icu/996.ICU/blob/master/LICENSE)

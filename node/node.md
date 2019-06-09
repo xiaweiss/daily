@@ -108,6 +108,32 @@ var url = myUrl.parse(requset.url, true); // 将 URL 转成对象
 var query = url.query  // { a: '123', b: '456'}，没有值返回 null
 ```
 
+# 输出 json 格式
+
+输出 json 格式需要设置响应头
+
+```javascript
+response.writeHead(200, {'Content-Type': 'application/json'})
+```
+
+如果你什么都不设置，默认是text/html 。常见的还有 
+text/css  text/plain  image/jpeg  text/xml application/octet-stream
+
+# 读取文件
+
+__dirname 值为当前的路径
+
+```javascript
+// readFile.js
+// 同步读取文件
+var data = fs.readFileSync(__dirname + "/conf.txt", "utf-8");
+
+// 异步读取文件
+fs.readFile(__dirname + "/config.txt", function(err, data) {
+    response.write("file1: " + Date.now().toString() + "</br>");
+})
+```
+
 
 
 

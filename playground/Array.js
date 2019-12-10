@@ -32,3 +32,6 @@ console.log(words);
 
 
 [1,2,3,4,5].reduce((previous, current) => previous + current) // 10
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2,0,"Lemon","Kiwi");

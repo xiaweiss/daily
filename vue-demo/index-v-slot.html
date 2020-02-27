@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}} {{message + message}}
+        <div :id="message"></div>
+        <todo-list v-slot="{list, handleDelete}">
+            <todo-item v-for="item in list" :title="item.title" :del="item.del" @delete="handleDelete"></todo-item>
+        </todo-list>
+    </div>
+    <script>
+        Vue.component('todo-list', {
+            template: `
+            <ul>
+                <slot v-bind="{list, handleDelete}" />
+            </ul>
+            `,
+            data() {
+                return {
+                    list: [
+                    {
+                        title: 'class1',
+                        del: false
+                    },
+                    {
+                        title: 'class2',
+                        del: true
+                    }
+                ]
+                }
+            },
+            methods: {
+                handleDelete(val) {
+                    console.log('handleDelete', val)
+                }
+            }
+        })
+        Vue.component('todo-item', {
+            props: {
+                title: String,
+                del: {
+                    type: Boolean,
+                    default: false
+                },
+                // delete: Function
+            },
+            template: `
+            <li>
+                <span v-if="!del">{{title}}</span>
+                <span v-else style="text-decoration: line-through">{{title}}</span>
+                <button v-show="!del" @click="handelClick(title)">del</button>
+            </li>
+            `,
+            data () {
+                return {}
+            },
+            methods: {
+                handelClick (val) {
+                    // this.delete(val)
+                    this.$emit('delete', val)
+                }
+            }
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello, World'
+            }
+        })
+    </script>
+</body>
+</html>

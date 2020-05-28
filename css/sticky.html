@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0
+    }
+
+    .nav {
+      position: fixed;
+      position: sticky;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      min-width: 1400px;
+      background: lightcyan;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+
+    .content {
+      width: 1400px;
+      height: 3000px;
+      margin: 0 auto;
+      background-color: pink;
+    }
+
+    .px16 {
+      font-size: 16px;
+    }
+
+    .px12 {
+      font-size: 12px;
+    }
+
+    .px10 {
+      display: inline-block;
+      font-size: 20px;
+      transform: scale(0.5);
+      transform-origin: left center;
+    }
+
+    .px8 {
+      display: inline-block;
+      font-size: 16px;
+      transform: scale(0.5);
+      transform-origin: left center;
+    }
+
+    .px6 {
+      display: inline-block;
+      font-size: 12px;
+      transform: scale(0.5);
+      transform-origin: left center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav" id="nav">
+    <div class="nav-inner">
+      <div>header-left</div>
+      <div>header-right</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="px16">
+      <span>16px</span>
+    </div>
+    <div>
+      <span class="px12">12px</span>
+    </div>
+    <div>
+      <span class="px10">10px</span>
+    </div>
+    <div>
+      <span class="px8">8px</span>
+    </div>
+    <div>
+      <span class="px6">6px</span>
+    </div>
+  </div>
+  <script>
+    window.onload = function () {
+      document.getElementById('nav').setAttribute('style', 'min-width:' + document.body.scrollWidth + 'px')
+    }
+  </script>
+</body>
+
+</html>

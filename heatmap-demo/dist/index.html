@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./main.js"></script>
+  <style>
+    html, body {
+      padding: 0; margin: 0;
+    }
+    .row {
+      width: 1200px;
+      height: 100px;
+    }
+    .row:nth-child(2n) {
+      position: relative;
+      background-color: skyblue;
+    }
+    .center-block {
+      width: 10px;
+      margin: 0 auto;
+      background-color: pink;
+      cursor: pointer;
+    }
+
+    .list {
+      width: 1400px;
+      margin: 0 auto;
+      /*overflow: auto;*/
+      /*height: 500px;*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="list click"></div>
+<!--    <div class="click">click.stop</div>-->
+<!--    <div class="row">-->
+<!--      <div class="center-block">0</div>-->
+<!--    </div>-->
+  </div>
+  <script>
+    document.querySelector('.click').addEventListener('click', function (e) {
+      e.stopPropagation()
+    })
+
+    for (var i = 0; i < 50; i++) {
+      var element = document.createElement('div')
+      element.setAttribute('class', 'row')
+      if (i === 10) {
+        element.innerHTML='<div class="center-block">0</div>'
+      } else {
+        element.innerHTML = i
+      }
+      document.querySelector('.list').appendChild(element)
+    }
+  </script>
+</body>
+</html>

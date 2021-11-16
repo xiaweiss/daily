@@ -10,8 +10,8 @@ module.exports = {
   ],
   // 默认 transform
   transform: {
-    "\.[jt]sx?$": "babel-jest",
-    "\.vue$": "vue3-jest",
+    "\\.[jt]sx?$": "babel-jest",
+    "\\.vue$": "vue3-jest",
   },
   // testEnvironment: 'jest-environment-jsdom',
   testEnvironment: 'jsdom',

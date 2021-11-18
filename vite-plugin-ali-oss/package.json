@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"ali-oss": "^6.16.0"
+	},
+	"scripts": {
+		"dev": "node index.js"
+	}
+}

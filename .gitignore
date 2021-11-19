@@ -3,5 +3,4 @@
 .cache
 .temp
 node_modules/
-*.lock
 *.log

@@ -2,9 +2,11 @@ lockfileVersion: 5.3
 
 specifiers:
   ali-oss: ^6.16.0
+  glob: ^7.2.0
 
 dependencies:
   ali-oss: registry.npmmirror.com/ali-oss/6.16.0
+  glob: registry.npmmirror.com/glob/7.2.0
 
 packages:
 
@@ -245,6 +247,12 @@ packages:
       wrappy: registry.nlark.com/wrappy/1.0.2
     dev: false
 
+  registry.nlark.com/inherits/2.0.4:
+    resolution: {integrity: sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/inherits/download/inherits-2.0.4.tgz}
+    name: inherits
+    version: 2.0.4
+    dev: false
+
   registry.nlark.com/ip/1.1.5:
     resolution: {integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/ip/download/ip-1.1.5.tgz}
     name: ip
@@ -401,7 +409,7 @@ packages:
     version: 1.1.14
     dependencies:
       core-util-is: registry.nlark.com/core-util-is/1.0.3
-      inherits: registry.npmmirror.com/inherits/2.0.4
+      inherits: registry.nlark.com/inherits/2.0.4
       isarray: registry.nlark.com/isarray/0.0.1
       string_decoder: registry.nlark.com/string_decoder/0.10.31
     dev: false
@@ -826,13 +834,13 @@ packages:
     dev: false
 
   registry.npmmirror.com/glob/7.2.0:
-    resolution: {integrity: sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/glob/download/glob-7.2.0.tgz?cache=0&sync_timestamp=1636422993768&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fglob%2Fdownload%2Fglob-7.2.0.tgz}
+    resolution: {integrity: sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/glob/download/glob-7.2.0.tgz}
     name: glob
     version: 7.2.0
     dependencies:
       fs.realpath: registry.nlark.com/fs.realpath/1.0.0
       inflight: registry.nlark.com/inflight/1.0.6
-      inherits: registry.npmmirror.com/inherits/2.0.4
+      inherits: registry.nlark.com/inherits/2.0.4
       minimatch: registry.nlark.com/minimatch/3.0.4
       once: registry.nlark.com/once/1.4.0
       path-is-absolute: registry.nlark.com/path-is-absolute/1.0.1
@@ -851,7 +859,7 @@ packages:
     engines: {node: '>= 0.6'}
     dependencies:
       depd: registry.nlark.com/depd/1.1.2
-      inherits: registry.npmmirror.com/inherits/2.0.4
+      inherits: registry.nlark.com/inherits/2.0.4
       setprototypeof: registry.nlark.com/setprototypeof/1.2.0
       statuses: registry.nlark.com/statuses/1.5.0
       toidentifier: registry.npmmirror.com/toidentifier/1.0.1

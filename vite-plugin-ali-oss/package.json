@@ -1,7 +1,9 @@
 {
 	"dependencies": {
-		"ali-oss": "^6.16.0"
+		"ali-oss": "^6.16.0",
+		"glob": "^7.2.0"
 	},
+	"type": "module",
 	"scripts": {
 		"dev": "node index.js"
 	}

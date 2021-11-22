@@ -1,8 +1,6 @@
 // @ts-check
 const fs = require('fs')
 const path = require('path')
-const { genApiIndex } = require('../../scripts/genApiIndex')
-const { genExamplesData } = require('../../scripts/genExamplesData')
 const { headerPlugin } = require('./header')
 
 const nav = [
@@ -12,10 +10,10 @@ const nav = [
     items: [
       {
         items: [
-          { text: 'Guide', link: '/guide/introduction' },
+          { text: 'Guide', link: '/doc/introduction' },
           { text: 'Tutorial', link: '/tutorial/' },
           { text: 'Examples', link: '/examples/' },
-          { text: 'Quick Start', link: '/guide/quick-start' },
+          { text: 'Quick Start', link: '/doc/quick-start' },
           { text: 'Style Guide', link: '/style-guide/' }
         ]
       }
@@ -93,14 +91,14 @@ const nav = [
 ]
 
 const sidebar = {
-  '/guide/': [
+  '/doc/': [
     {
       text: 'Getting Started',
       items: [
-        { text: 'Introduction', link: '/guide/introduction' },
+        { text: 'Introduction', link: '/doc/introduction' },
         {
           text: 'Quick Start',
-          link: '/guide/quick-start'
+          link: '/doc/quick-start'
         }
       ]
     },
@@ -109,34 +107,34 @@ const sidebar = {
       items: [
         {
           text: 'Creating an Application',
-          link: '/guide/essentials/application'
+          link: '/doc/essentials/application'
         },
         {
           text: 'Template Syntax',
-          link: '/guide/essentials/template-syntax'
+          link: '/doc/essentials/template-syntax'
         },
         {
           text: 'Reactivity Fundamentals',
-          link: '/guide/essentials/reactivity-fundamentals'
+          link: '/doc/essentials/reactivity-fundamentals'
         },
-        { text: 'Computed Properties', link: '/guide/essentials/computed' },
+        { text: 'Computed Properties', link: '/doc/essentials/computed' },
         {
           text: 'Class and Style Bindings',
-          link: '/guide/essentials/class-and-style'
+          link: '/doc/essentials/class-and-style'
         },
         {
           text: 'Conditional Rendering',
-          link: '/guide/essentials/conditional'
+          link: '/doc/essentials/conditional'
         },
-        { text: 'List Rendering', link: '/guide/essentials/list' },
-        { text: 'Event Handling', link: '/guide/essentials/event-handling' },
-        { text: 'Form Input Bindings', link: '/guide/essentials/forms' },
-        { text: 'Watchers', link: '/guide/essentials/watchers' },
+        { text: 'List Rendering', link: '/doc/essentials/list' },
+        { text: 'Event Handling', link: '/doc/essentials/event-handling' },
+        { text: 'Form Input Bindings', link: '/doc/essentials/forms' },
+        { text: 'Watchers', link: '/doc/essentials/watchers' },
         {
           text: 'Components Basics',
-          link: '/guide/essentials/component-basics'
+          link: '/doc/essentials/component-basics'
         },
-        { text: 'Template Refs', link: '/guide/essentials/template-refs' }
+        { text: 'Template Refs', link: '/doc/essentials/template-refs' }
       ]
     },
     {
@@ -144,23 +142,23 @@ const sidebar = {
       items: [
         {
           text: 'Registration',
-          link: '/guide/components/registration'
+          link: '/doc/components/registration'
         },
         {
           text: 'Lifecycle',
-          link: '/guide/components/lifecycle'
+          link: '/doc/components/lifecycle'
         },
-        { text: 'Props', link: '/guide/components/props' },
-        { text: 'Non-Prop Attributes', link: '/guide/components/attrs' },
-        { text: 'Events', link: '/guide/components/events' },
-        { text: 'Slots', link: '/guide/components/slots' },
+        { text: 'Props', link: '/doc/components/props' },
+        { text: 'Non-Prop Attributes', link: '/doc/components/attrs' },
+        { text: 'Events', link: '/doc/components/events' },
+        { text: 'Slots', link: '/doc/components/slots' },
         {
           text: 'Provide / inject',
-          link: '/guide/components/provide-inject'
+          link: '/doc/components/provide-inject'
         },
         {
           text: 'Async Components',
-          link: '/guide/components/async'
+          link: '/doc/components/async'
         }
       ]
     },
@@ -169,37 +167,37 @@ const sidebar = {
       items: [
         {
           text: 'Composables',
-          link: '/guide/reusability/composables'
+          link: '/doc/reusability/composables'
         },
         {
           text: 'Custom Directives',
-          link: '/guide/reusability/custom-directives'
+          link: '/doc/reusability/custom-directives'
         },
-        { text: 'Plugins', link: '/guide/reusability/plugins' }
+        { text: 'Plugins', link: '/doc/reusability/plugins' }
       ]
     },
     {
       text: 'Built-in Components',
       items: [
-        { text: 'Transition', link: '/guide/built-ins/transition' },
-        { text: 'TransitionGroup', link: '/guide/built-ins/transition-group' },
-        { text: 'KeepAlive', link: '/guide/built-ins/keep-alive' },
-        { text: 'Teleport', link: '/guide/built-ins/teleport' },
-        { text: 'Suspense', link: '/guide/built-ins/suspense' }
+        { text: 'Transition', link: '/doc/built-ins/transition' },
+        { text: 'TransitionGroup', link: '/doc/built-ins/transition-group' },
+        { text: 'KeepAlive', link: '/doc/built-ins/keep-alive' },
+        { text: 'Teleport', link: '/doc/built-ins/teleport' },
+        { text: 'Suspense', link: '/doc/built-ins/suspense' }
       ]
     },
     {
       text: 'Scaling Up',
       items: [
-        { text: 'Single File Components', link: '/guide/scaling-up/sfc' },
-        { text: 'Tooling', link: '/guide/scaling-up/tooling' },
-        { text: 'Routing', link: '/guide/scaling-up/routing' },
+        { text: 'Single File Components', link: '/doc/scaling-up/sfc' },
+        { text: 'Tooling', link: '/doc/scaling-up/tooling' },
+        { text: 'Routing', link: '/doc/scaling-up/routing' },
         {
           text: 'State Management',
-          link: '/guide/scaling-up/state-management'
+          link: '/doc/scaling-up/state-management'
         },
-        { text: 'Testing', link: '/guide/scaling-up/testing' },
-        { text: 'TypeScript', link: '/guide/scaling-up/typescript' }
+        { text: 'Testing', link: '/doc/scaling-up/testing' },
+        { text: 'TypeScript', link: '/doc/scaling-up/typescript' }
       ]
     },
     {
@@ -207,19 +205,19 @@ const sidebar = {
       items: [
         {
           text: 'Production Deployment',
-          link: '/guide/best-practices/production-deployment'
+          link: '/doc/best-practices/production-deployment'
         },
         {
           text: 'Performance',
-          link: '/guide/best-practices/performance'
+          link: '/doc/best-practices/performance'
         },
         {
           text: 'Security',
-          link: '/guide/best-practices/security'
+          link: '/doc/best-practices/security'
         },
         {
           text: 'Accessibility',
-          link: '/guide/best-practices/accessibility'
+          link: '/doc/best-practices/accessibility'
         }
       ]
     },
@@ -228,40 +226,40 @@ const sidebar = {
       items: [
         {
           text: 'Ways of Using Vue',
-          link: '/guide/advanced/ways-of-using-vue'
+          link: '/doc/advanced/ways-of-using-vue'
         },
         {
           text: 'Reactivity in Depth',
-          link: '/guide/advanced/reactivity-in-depth'
+          link: '/doc/advanced/reactivity-in-depth'
         },
         {
           text: 'Rendering Mechanism',
-          link: '/guide/advanced/rendering-mechanism'
+          link: '/doc/advanced/rendering-mechanism'
         },
         {
           text: 'Render Functions & JSX',
-          link: '/guide/advanced/render-function'
+          link: '/doc/advanced/render-function'
         },
         {
           text: 'Server-Side Rendering',
-          link: '/guide/advanced/server-side-rendering'
+          link: '/doc/advanced/server-side-rendering'
         },
-        { text: 'Custom Renderers', link: '/guide/advanced/custom-renderer' },
+        { text: 'Custom Renderers', link: '/doc/advanced/custom-renderer' },
         {
           text: 'Web Components',
-          link: '/guide/advanced/web-components'
+          link: '/doc/advanced/web-components'
         },
         {
           text: 'Building a Library for Vue',
-          link: '/guide/advanced/building-a-library'
+          link: '/doc/advanced/building-a-library'
         },
         {
           text: 'Advanced Animations',
-          link: '/guide/advanced/animation'
+          link: '/doc/advanced/animation'
         }
         // {
         //   text: 'Vue for React Devs',
-        //   link: '/guide/advanced/vue-for-react-devs'
+        //   link: '/doc/advanced/vue-for-react-devs'
         // }
       ]
     }
@@ -470,9 +468,6 @@ const sidebar = {
     }
   ]
 }
-
-genApiIndex(sidebar['/api/'])
-genExamplesData()
 
 /**
  * @type {import('vitepress').UserConfig}

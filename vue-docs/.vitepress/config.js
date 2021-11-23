@@ -559,6 +559,6 @@ const config = {
   }
 }
 
-console.log('vitepress config', config)
+// console.log('vitepress config', config)
 
 module.exports = config

@@ -1,0 +1,18 @@
+{
+  "name": "typescript",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^8",
+    "rollup": "^2.10.9",
+    "rollup-plugin-vue": "^6",
+    "tslib": "^2.3.1",
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "vue": "^3.2.26"
+  }
+}

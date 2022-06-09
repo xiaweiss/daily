@@ -1,0 +1,15 @@
+{
+  "name": "query-string",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xiawei",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "query-string": "^7.0.1"
+  }
+}

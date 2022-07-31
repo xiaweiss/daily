@@ -6,9 +6,8 @@ let color: Color = '#aab'
 
 console.log(color)
 
-// function foo (param: `#{string}`) {
+function foo (param: `#${string}`) {
 
-// }
+}
 
-// // foo('aaa')
-// foo('#aaa')
+foo('#aaa')

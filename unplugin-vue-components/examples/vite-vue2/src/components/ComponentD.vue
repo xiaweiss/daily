@@ -1,7 +1,0 @@
-<template>
-  <h3>Component D: <component-b msg="wrapper" /></h3>
-</template>
-
-<script>
-export default {}
-</script>

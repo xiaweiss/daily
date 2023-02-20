@@ -1,1 +1,0 @@
-https://github.com/jaelam0214/vite-plugin-oss

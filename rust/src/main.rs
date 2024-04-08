@@ -1,4 +1,4 @@
 fn main() {
-    // let myname = "Rust";
-    println!("Hello, world!");
+    let myname = "Rust";
+    println!("Hello, {}!", myname);
 }

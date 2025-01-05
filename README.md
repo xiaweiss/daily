@@ -1,7 +1,7 @@
 # daily
 idea, practice or some else
 
-自己的小日常
+日常练习的代码仓库
 
 issue 记录一些有价值的碎片信息
 

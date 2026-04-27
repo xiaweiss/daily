@@ -85,12 +85,58 @@ fn main() {
 
     // let second = a[1];
 
-    println!("Hello, world!");
+    // println!("Hello, world!");
 
-    another_function(5, 'h');
+    // another_function(5, 'h');
+
+    // let y = {
+    //   let x = 3;
+    //   x + 2
+    // };
+
+    // println!("The value of y is: {y}");
+
+    // check(y);
+
+    // let mut couter = 0;
+
+    // let result = loop {
+    //   couter += 1;
+
+    //   if couter == 10 {
+    //     break couter * 2;
+    //   }
+    // };
+
+    // println!("The result is: {result}");
+
+    // let a = [10, 20, 30, 40, 50];
+
+    // for element in a {
+    //     println!("The value is: {element}");
+    // }
+
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{number}!");
+
+        number -= 1;
+    }
+
+    for number in 4..1 {
+        println!("{number}!");
+    }
 }
 
 
-fn another_function(x: i32, unit_label: char) {
-    println!("Another function. {x}{unit_label}")
-}
+// fn another_function(x: i32, unit_label: char) {
+//     println!("Another function. {x}{unit_label}")
+// }
+
+// fn check(n: i32) -> bool {
+//     if n < 0 {
+//         return false; // 必须加分号
+//     }
+//     true
+// }

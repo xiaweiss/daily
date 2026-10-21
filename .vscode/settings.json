@@ -1,0 +1,7 @@
+{
+  "rust-analyzer.linkedProjects": [
+    "rust/primitives.rs",
+    "rust/1_Hello_World/hello.rs",
+    "rust/1_Hello_World/print.rs"
+  ]
+}
